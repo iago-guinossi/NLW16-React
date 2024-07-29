@@ -41,7 +41,8 @@ export function CreateTripPage() {
     setIsConfirmTripModalOpen(false);
   }
 
-  function createTrip() {
+  function createTrip(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
     navigate("/trips/123");
   }
 
