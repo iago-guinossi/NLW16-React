@@ -1,7 +1,4 @@
-import {
-  ArrowRight,
-  UserRoundPlus,
-} from "lucide-react";
+import { ArrowRight, UserRoundPlus } from "lucide-react";
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { InviteGuestsModal } from "./invite-guests-modal";
@@ -40,7 +37,7 @@ export function CreateTripPage() {
   }
 
   function createTrip(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
     navigate("/trips/123");
   }
 
@@ -79,7 +76,11 @@ export function CreateTripPage() {
           </p>
         </div>
         <div className="space-y-4">
-          <DestinationAndDateStep isGuestsInputOpen={isGuestsInputOpen} closeGuestsInput={closeGuestsInput} openGuestsInput={openGuestsInput}/>
+          <DestinationAndDateStep
+            isGuestsInputOpen={isGuestsInputOpen}
+            closeGuestsInput={closeGuestsInput}
+            openGuestsInput={openGuestsInput}
+          />
           {isGuestsInputOpen && (
             <div className="h-16 bg-zinc-900 px-4 rounded-xl flex items-center shadow-shape gap-3">
               <button
